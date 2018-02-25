@@ -3,10 +3,10 @@ class SorceryCore < ActiveRecord::Migration[5.1]
     create_table :authors do |t|
       t.string :username,         :null => false
       t.string :email,            :null => false
-      t.string :crypted_password  :null => false
-      t.string :salt              :null => false
+      t.string :crypted_password,  :null => false
+      t.string :salt,              :null => false
 
-      t.timestamps                :null => false
+      t.timestamps               
     end
 
     add_index :authors, :email, unique: true
